@@ -2,13 +2,13 @@
 
 [@w5/coffee_plus](http://npmjs.com/@w5/coffee_plus) , dodajte neke karakteristike na osnovu kafeskript sintakse, pogledajte [coffee_plus](./coffee_plus.md) .
 
-* deklarisati promenljivu
+## deklarisati promenljivu
 
 ```
 + var1, var2
 ```
 
-* etiketa deklaracije
+## etiketa deklaracije
 
 `:$` je za upotrebu sa [vitkim](https://svelte.dev/docs#component-format-script-3-$-marks-a-statement-as-reactive) .
 
@@ -90,7 +90,7 @@ $ : (func = function() {
 });
 ```
 
-* brzi uvoz
+## brzi uvoz
 
 ```
 > zx/globals:

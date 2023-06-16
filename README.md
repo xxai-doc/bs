@@ -1,10 +1,10 @@
 <p align="center"><a href="https://xxai.art"><img src="https://cdn.jsdelivr.net/gh/xxai-art/doc/logo.svg"/></a><br/><a href="https://xxai.art"><img src="https://cdn.jsdelivr.net/gh/xxai-art/doc/xxai.svg"/></a></p><p align="center"><a href="https://github.com/xxai-art/doc#readme"><img alt="I18N" src="https://cdn.jsdelivr.net/gh/wactax/img/t.svg"/></a>　<a href="https://groups.google.com/u/0/g/xxai-art"><img alt="Google Groups" src="https://cdn.jsdelivr.net/gh/wactax/img/g-groups.svg"/></a></p>
 
-# xxAI.art
+Preporučuje se da prvo instalirate nodejs, [direnv](https://direnv.net) , [bun](https://github.com/oven-sh/bun) , a zatim `direnv allow` nakon ulaska u direktorij ( [.envrc](https://github.com/xxai-art/doc/blob/main/.envrc) će se automatski izvršiti nakon ulaska u direktorij).
 
-Dio koda web stranice je otvorenog koda, dobrodošli da pomognete u optimizaciji prijevoda.
+Značenje je: kineski prijevod na japanski, korejski, engleski, engleski prijevod na sve ostale jezike. Ako želite da podržavate samo kineski i engleski, možete samo napisati `zh: en` .
 
-## front-end kod
+Značenje je: kineski prijevod na japanski, korejski, engleski, engleski prijevod na sve ostale jezike. Ako želite da podržavate samo kineski i engleski, možete samo napisati `zh: en` .
 
 * [front-end kod](https://github.com/xxai-art/web)
 * [Jezički paketi za web lokaciju u cjelini](https://github.com/xxai-art/web/tree/main/i18n)
@@ -31,15 +31,15 @@ Nadogradite sljedeća 3 projekta
 
 ### Uputstva za automatizaciju prevođenja dokumenata
 
-Vidi repozitorijum [xxai-art/doc](https://github.com/xxai-art/doc)
+Pogledajte spremište kodova [xxai-art/doc](https://github.com/xxai-art/doc)
 
-Preporučljivo je prvo instalirati nodejs, [direnv](https://direnv.net) i [bun](https://github.com/oven-sh/bun) , a zatim pokrenuti `direnv allow` nakon ulaska u direktorij.
+Preporučuje se da prvo instalirate nodejs, [direnv](https://direnv.net) , [bun](https://github.com/oven-sh/bun) , a zatim `direnv allow` nakon ulaska u direktorij ( [.envrc](https://github.com/xxai-art/doc/blob/main/.envrc) će se automatski izvršiti nakon ulaska u direktorij).
 
-Kako bih izbjegao prevelika skladišta prevedena na stotine jezika, napravio sam zasebno skladište kodova za svaki jezik i stvorio organizaciju za skladištenje ovog skladišta
+Kako bih izbjegao veliku bazu koda prevedenu na stotine jezika, kreirao sam zasebnu bazu koda za svaki jezik i stvorio organizaciju za pohranjivanje baze koda
 
-Postavljanje varijable okruženja `GITHUB_ACCESS_TOKEN` i zatim pokretanje [create.github.coffee](https://github.com/xxai-art/doc/blob/main/create.github.coffee) će automatski kreirati skladište.
+Postavljanje varijable okruženja `GITHUB_ACCESS_TOKEN` i zatim pokretanje [create.github.coffee](https://github.com/xxai-art/doc/blob/main/create.github.coffee) će automatski kreirati spremište koda.
 
-Naravno, možete ga staviti i u skladište.
+Naravno, možete ga staviti i u bazu koda.
 
 Referenca skripte prijevoda [run.sh](https://github.com/xxai-art/doc/blob/main/run.sh)
 
@@ -71,4 +71,8 @@ Google API se koristi za besplatno prevođenje. Ako ne možete pristupiti Google
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 ```
 
-Skripta za prevođenje će generirati keš prijevoda u `.i18n` direktoriju, provjerite ga sa `git status` i dodajte ga u spremište koda kako biste izbjegli ponovljene prijevode.
+Skripta za prevođenje će generirati prevedenu keš memoriju u `.i18n` direktoriju, provjerite je sa `git status` i dodajte je u spremište koda kako biste izbjegli ponovljene prijevode.
+
+Pokrenite `bunx i18n` svaki put kada modificirate prijevod da ažurirate keš memoriju.
+
+Ako se originalni tekst i prijevod modificiraju u isto vrijeme, keš će biti zbunjen, tako da ako želite izmijeniti, možete izmijeniti samo jedan, a zatim pokrenuti `bunx i18n` da ažurirate keš memoriju.

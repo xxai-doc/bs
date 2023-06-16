@@ -2,9 +2,29 @@
 
 # xxAI.art
 
-Front-end kod web stranice je otvorenog koda, dobrodošli da pomognete u optimizaciji prijevoda
+Dio koda web stranice je otvorenog koda, dobrodošli da pomognete u optimizaciji prijevoda.
+
+## front-end kod
 
 * [front-end kod](https://github.com/xxai-art/web)
 * [Jezički paketi za web lokaciju u cjelini](https://github.com/xxai-art/web/tree/main/i18n)
 * [Jezički paketi za module za prijavu](https://github.com/wacpkg/user/tree/main/ui.i18n)
 * [Višejezična dokumentacija web stranice](https://github.com/xxai-doc)
+
+Front-end programski jezik je [@w5/coffee_plus](http://npmjs.com/@w5/coffee_plus) , koji dodaje neke funkcije zasnovane na kafeskript sintaksi, pogledajte [./coffee_plus.md](./coffee_plus.md) .
+
+## Internacionalizacija web stranica i dokumenata
+
+Nadogradite sljedeća 3 projekta
+
+### [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
+
+Predložak za označavanje, sa sufiksom `.mdt` , može se odnositi na vanjske datoteke sa sintaksom sličnom `<+ ./coffee_plus/import.js>` .
+
+[@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
+
+Markdown prijevod neće prevoditi kodove i veze, već će keširati prevedene rečenice. Ako je prijevod izmijenjen, ali originalni tekst nije izmijenjen, njegovo ponovno izvršavanje neće prepisati izmjenu prijevoda.
+
+[@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
+
+Jezički fajlovi za prevođenje `yaml` generiranih web stranica.

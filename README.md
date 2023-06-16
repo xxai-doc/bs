@@ -17,14 +17,14 @@ Front-end programski jezik je [@w5/coffee_plus](http://npmjs.com/@w5/coffee_plus
 
 Nadogradite sljedeća 3 projekta
 
-### [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
+* [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
 
-Predložak za označavanje, sa sufiksom `.mdt` , može se odnositi na vanjske datoteke sa sintaksom sličnom `<+ ./coffee_plus/import.js>` .
+  Sufiks je `.mdt` , možete koristiti sintaksu sličnu `<+ ./coffee_plus/import.js>` za upućivanje na vanjske datoteke i generirati markdown sa sufiksom `.md` .
 
-[@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
+* [@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
 
-Markdown prijevod neće prevoditi kodove i veze, već će keširati prevedene rečenice. Ako je prijevod izmijenjen, ali originalni tekst nije izmijenjen, njegovo ponovno izvršavanje neće prepisati izmjenu prijevoda.
+  Markdown prijevod neće prevoditi kodove i veze, već će keširati prevedene rečenice. Ako je prijevod izmijenjen, ali originalni tekst nije izmijenjen, njegovo ponovno izvršavanje neće prepisati izmjenu prijevoda.
 
-[@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
+* [@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
 
-Jezički fajlovi za prevođenje `yaml` generiranih web stranica.
+  Jezički fajlovi za prevođenje `yaml` generiranih web stranica.
